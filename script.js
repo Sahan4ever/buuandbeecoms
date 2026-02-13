@@ -1,18 +1,20 @@
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
-const message = document.getElementById("message");
+const response = document.getElementById("response");
 
+/* YES Click */
 yesBtn.addEventListener("click", () => {
-  message.innerHTML = "Yay! 💖 I can't wait for our date 😍";
-  message.classList.remove("hidden");
+  response.classList.remove("hidden");
+  response.innerHTML =
+    "YAYYY 🐝💛 My Bee said YES!! 🍯💍💖<br>Now you're stuck with me forever 😍";
 });
 
+/* NO Button Runs Away */
 noBtn.addEventListener("mouseover", () => {
-  // Move the "No" button randomly
-  const x = Math.random() * (window.innerWidth - 150);
-  const y = Math.random() * (window.innerHeight - 150);
+  const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+  const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
 
   noBtn.style.position = "absolute";
-  noBtn.style.left = x + "px";
-  noBtn.style.top = y + "px";
+  noBtn.style.left = `${x}px`;
+  noBtn.style.top = `${y}px`;
 });
